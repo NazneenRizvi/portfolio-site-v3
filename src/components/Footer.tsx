@@ -1,6 +1,6 @@
 "use client";
 
-import { FaGithub, FaLinkedin, FaArrowUp } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaArrowUp, FaBriefcase } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="flex gap-5 text-2xl">
 
           <a
-            href="https://github.com/NazneenRizvi"
+            aria-label="GitHub profile"\n            href="https://github.com/NazneenRizvi"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-cyan-400 transition"
@@ -29,7 +29,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/nazneen-rizvi-2bb237208/"
+            aria-label="LinkedIn profile"\n            href="https://www.linkedin.com/in/nazneen-rizvi-2bb237208/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-cyan-400 transition"
@@ -38,7 +38,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="#home"
+            aria-label="Back to top"\n            href="#"
             className="hover:text-cyan-400 transition"
           >
             <FaArrowUp />
