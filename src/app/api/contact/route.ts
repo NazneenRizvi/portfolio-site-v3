@@ -8,6 +8,9 @@ export async function POST(req: Request) {
     const message = typeof body.message === "string" ? body.message.trim() : "";
     // Honeypot: legitimate users should not complete this field.
     if (body.website) return NextResponse.json({ok:true});
+    const origin = req.headers.get("origin");
+    const host = req.headers.get("host");
+    if (origin && host && new URL(origin).host !== host) return NextResponse.json({error:"Invalid request origin."},{status:403});
     if (!name || name.length > 100 || !EMAIL.test(email) || email.length > 254 || !message || message.length > 4000) {
       return NextResponse.json({error:"Please check your details and try again."},{status:400});
     }
