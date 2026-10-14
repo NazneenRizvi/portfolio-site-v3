@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
   {
-    url: "/projects/og-image.png",
+    url: "/projects/og-image.svg",
     width: 1200,
     height: 630,
     alt: "Nazneen Rizvi Portfolio",
