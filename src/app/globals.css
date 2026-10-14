@@ -1,0 +1,83 @@
+/* Tailwind Base, Components, and Utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    color: #0e0101;
+    background-color: #fff;
+  }
+}
+
+@layer components {
+  .menuLink {
+    @apply cursor-pointer text-white hover:text-gray-300 transition duration-300 ease-in-out;
+  }
+
+  /* Default Tag Color */
+  .tags {
+    background-color: #0abde3;
+    margin-right: 0.5rem;
+    padding: 3px 10px;
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+  }
+
+  .tags:last-child {
+    margin-right: 0;
+  }
+
+  /* Different Colors for Specific Tags */
+  .tags[data-color="orange"] {
+    background-color: #f39c12;
+  }
+
+  .tags[data-color="purple"] {
+    background-color: #a55eea;
+  }
+
+  .tags[data-color="green"] {
+    background-color: #4cca0e;
+  }
+
+  .tags[data-color="red"] {
+    background-color: #e74c3c;
+  }
+
+  .bg-accent {
+    background-color: #a55eea;
+    color: #fff; /* Optional: White text for contrast */
+  }
+}
+
+/* Add these styles for specific sections */
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 4rem;
+  min-height: 100vh; /* Adjust this as needed */
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 4rem;
+  min-height: 100vh; /* Adjust this as needed */
+}
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
