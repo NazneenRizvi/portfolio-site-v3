@@ -1,0 +1,9 @@
+"use client";
+import { motion } from "framer-motion";
+const services=[
+{title:"Business Websites",desc:"Fast, accessible sites that showcase your services and help visitors contact your business."},
+{title:"E-commerce Frontends",desc:"Responsive storefronts, product displays and shopping interfaces built around your customers."},
+{title:"React & Next.js Apps",desc:"Modern component-based experiences using TypeScript and maintainable frontend code."},
+{title:"Responsive UI & Optimization",desc:"Improve usability, accessibility and performance across phones, tablets and desktop."}
+];
+export default function Services(){return <section id="services" className="bg-slate-950 text-white py-20"><div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-12"><h2 className="text-center text-4xl md:text-5xl font-bold mb-5">My <span className="text-cyan-400">Services</span></h2><p className="text-gray-400 text-center mb-12">Frontend solutions designed around your project goals.</p><div className="grid sm:grid-cols-2 gap-6">{services.map((s,i)=><motion.article key={s.title} initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*0.07}} className="rounded-2xl border border-cyan-500/20 bg-slate-900 p-7 hover:border-cyan-400"><h3 className="text-xl font-bold text-cyan-300 mb-3">{s.title}</h3><p className="text-gray-300 leading-relaxed">{s.desc}</p></motion.article>)}</div><div className="text-center mt-10"><a className="inline-block px-7 py-3 rounded-full bg-cyan-500 text-slate-950 font-bold hover:bg-cyan-400" href="#contact">Discuss Your Project</a></div></div></section>}
