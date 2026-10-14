@@ -16,24 +16,26 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "success">("idle");
 
+  const [error, setError] = useState("");
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name || !email || !message) return;
-
+    if (!name.trim() || !email.trim() || !message.trim()) return;
+    setError("");
     setStatus("sending");
-    
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({name, email, message}),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.ok) throw new Error(data.error || "Message could not be sent.");
       setStatus("success");
-      setName("");
-      setEmail("");
-      setMessage("");
-      
-      // Reset back to idle after 5 seconds
-      setTimeout(() => {
-        setStatus("idle");
-      }, 5000);
-    }, 1500);
+      setName(""); setEmail(""); setMessage("");
+    } catch(err) {
+      setError(err instanceof Error ? err.message : "Unable to send message.");
+      setStatus("idle");
+    }
   };
 
   return (
@@ -139,7 +141,7 @@ export default function Contact() {
         </p>
       </motion.div>
     ) : (
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-6">\n        {error && <p role="alert" className="text-red-300 text-sm">{error} <a className="underline" href="mailto:rizvinazneen896@gmail.com">Email me directly</a>.</p>}
         <input
           type="text"
           placeholder="Your Name"
