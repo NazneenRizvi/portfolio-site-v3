@@ -17,16 +17,17 @@ export default function Contact() {
   const [status, setStatus] = useState<"idle" | "sending" | "success">("idle");
 
   const [error, setError] = useState("");
+  const [website, setWebsite] = useState("");
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name.trim() || !email.trim() || !message.trim()) return;
+    if (!name.trim() || !email.trim() || !message.trim()) return;\n    if (name.length > 100 || email.length > 254 || message.length > 4000) { setError("Please shorten your message or details."); return; }
     setError("");
     setStatus("sending");
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({name, email, message}),
+        body: JSON.stringify({name, email, message, website}),
       });
       const data = await res.json();
       if (!res.ok || !data.ok) throw new Error(data.error || "Message could not be sent.");
@@ -141,7 +142,7 @@ export default function Contact() {
         </p>
       </motion.div>
     ) : (
-      <form onSubmit={handleSubmit} className="space-y-6">\n        {error && <p role="alert" className="text-red-300 text-sm">{error} <a className="underline" href="mailto:rizvinazneen896@gmail.com">Email me directly</a>.</p>}
+      <form onSubmit={handleSubmit} className="space-y-6">\n        <div className="absolute -left-[9999px]" aria-hidden="true"><label htmlFor="company-website">Leave this field empty</label><input id="company-website" type="text" tabIndex={-1} autoComplete="off" value={website} onChange={(e) => setWebsite(e.target.value)} /></div>\n        {error && <p role="alert" className="text-red-300 text-sm">{error} <a className="underline" href="mailto:rizvinazneen896@gmail.com">Email me directly</a>.</p>}
         <input
           type="text"
           placeholder="Your Name"
