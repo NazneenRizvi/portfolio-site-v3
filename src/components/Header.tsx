@@ -26,6 +26,7 @@ export default function Header() {
           <div className="hidden md:flex space-x-8">
             <Link href="#about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200">About</Link>
             <Link href="#skills" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200">Skills</Link>
+            <Link href="#services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200">Services</Link>
             <Link href="#projects" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200">Projects</Link>
             <Link href="#contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200">Contact</Link>
           </div>
@@ -46,6 +47,7 @@ export default function Header() {
           <div className="md:hidden mt-4 bg-slate-900/95 border border-cyan-500/20 rounded-2xl p-4 space-y-3 shadow-xl backdrop-blur-md">
             <Link href="#about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1" onClick={handleMenuClick}>About</Link>
             <Link href="#skills" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1" onClick={handleMenuClick}>Skills</Link>
+            <Link href="#services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200">Services</Link>
             <Link href="#projects" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1" onClick={handleMenuClick}>Projects</Link>
             <Link href="#contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1" onClick={handleMenuClick}>Contact</Link>
           </div>
