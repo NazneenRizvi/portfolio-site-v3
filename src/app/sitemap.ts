@@ -1,12 +1,5 @@
 import { MetadataRoute } from "next";
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: "https://portfolio-site-v2-dusky.vercel.app",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
-    },
-  ];
+  const base = process.env.NEXT_PUBLIC_SITE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+  return [{url:base,lastModified:new Date(),changeFrequency:"monthly",priority:1}];
 }
