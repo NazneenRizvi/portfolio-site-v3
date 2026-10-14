@@ -106,7 +106,7 @@ export default function Hero() {
               className="flex gap-6 mt-8 text-3xl text-cyan-400"
             >
               <a
-                href="https://github.com/YOUR_GITHUB_USERNAME"
+                href="https://github.com/NazneenRizvi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white hover:scale-110 transition"
@@ -115,7 +115,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME"
+                href="https://www.linkedin.com/in/nazneen-rizvi-2bb237208/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white hover:scale-110 transition"
@@ -124,7 +124,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="mailto:your@email.com"
+                href="mailto:rizvinazneen896@gmail.com"
                 className="hover:text-white hover:scale-110 transition"
               >
                 <FaEnvelope />
@@ -160,7 +160,7 @@ export default function Hero() {
                 </div>
 
                 <p className="text-cyan-400 font-semibold text-sm sm:text-base">
-                  3D Model Coming Soon...
+                  Building useful digital experiences
                 </p>
 
               </div>
