@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Script from "next/script";
 import "./globals.css";
 
 
@@ -16,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfolio-site-v2-dusky.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")),
 
   title: {
     default: "Nazneen Rizvi | Front-End Developer",
@@ -48,13 +47,13 @@ export const metadata: Metadata = {
     title: "Nazneen Rizvi | Front-End Developer",
     description:
       "Explore my portfolio, projects and skills built with Next.js, React and TypeScript.",
-    url: "https://portfolio-site-v2-dusky.vercel.app",
+    url: "/",
     siteName: "Nazneen Rizvi Portfolio",
     locale: "en_US",
     type: "website",
     images: [
   {
-    url: "/og-image.png",
+    url: "/projects/og-image.png",
     width: 1200,
     height: 630,
     alt: "Nazneen Rizvi Portfolio",
@@ -74,9 +73,6 @@ export const metadata: Metadata = {
     follow: true,
   },
 
-  verification: {
-    google: "G-YOUR_SEARCH_CONSOLE_ID", // Change this to your Google Search Console verification code
-  },
 };
 export default function RootLayout({
   children,
