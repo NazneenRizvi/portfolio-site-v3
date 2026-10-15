@@ -17,6 +17,9 @@ import {
   SiTailwindcss,
   SiFirebase,
   SiFastapi,
+  SiExpress,
+  SiPostgresql,
+  SiVite,
 } from "react-icons/si";
 
 const skills = [
@@ -29,11 +32,14 @@ const skills = [
   { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "text-cyan-400" },
   { name: "Git", icon: <FaGitAlt />, color: "text-orange-500" },
   { name: "GitHub", icon: <FaGithub />, color: "text-white" },
-  { name: "Firebase", icon: <SiFirebase />, color: "text-yellow-400" },
+  { name: "Firebase Auth", icon: <SiFirebase />, color: "text-yellow-400" },
+  { name: "Node.js", icon: <FaNodeJs />, color: "text-green-500" },
+  { name: "Express", icon: <SiExpress />, color: "text-white" },
+  { name: "PostgreSQL", icon: <SiPostgresql />, color: "text-blue-400" },
+  { name: "Vite", icon: <SiVite />, color: "text-purple-400" },
 ];
 
 const learning = [
-  { name: "Node.js", icon: <FaNodeJs />, color: "text-green-500" },
   { name: "FastAPI", icon: <SiFastapi />, color: "text-teal-400" },
   { name: "Artificial Intelligence", icon: "🤖", color: "text-cyan-400" },
 ];
@@ -60,8 +66,7 @@ export default function Skills() {
           </h2>
 
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-            Technologies and tools I use to build modern,
-            responsive and user-friendly web applications.
+            Technologies I use across frontend interfaces, backend APIs and e-commerce projects.
           </p>
         </motion.div>
 
