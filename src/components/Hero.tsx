@@ -49,13 +49,13 @@ export default function Hero() {
             >
               <TypeAnimation
                 sequence={[
-                  "Front-end Developer",
+                  "Full-Stack Web Developer",
                   2000,
-                  "React Developer",
+                  "E-commerce Developer",
                   2000,
-                  "Next.js Developer",
+                  "React & Next.js Developer",
                   2000,
-                  "TypeScript Developer",
+                  "Node.js & Express Developer",
                   2000,
                 ]}
                 wrapper="span"
@@ -70,9 +70,7 @@ export default function Hero() {
               transition={{ delay: 0.7 }}
               className="mt-6 text-base sm:text-lg text-gray-400 leading-7 max-w-xl"
             >
-              I build modern, responsive and user-friendly web applications
-              using HTML, CSS, JavaScript, React, Next.js, TypeScript and
-              Tailwind CSS.
+              I build responsive websites, full-stack e-commerce experiences and web applications with React, Next.js, TypeScript, Node.js and Express.
             </motion.p>
 
             {/* Buttons */}
