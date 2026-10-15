@@ -23,8 +23,7 @@ export default function About() {
           </h2>
 
           <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-            Passionate Front-end Developer focused on creating beautiful,
-            responsive and user-friendly web applications.
+            Full-Stack Web Developer building responsive applications, e-commerce storefronts and practical backend APIs.
           </p>
         </motion.div>
 
@@ -45,18 +44,14 @@ export default function About() {
 
             <p className="text-gray-300 leading-8">
               I'm <span className="text-cyan-400 font-semibold">Syeda Nazneen Rizvi</span>,
-              a passionate Front-end Developer who enjoys building modern,
-              responsive and user-friendly websites using React, Next.js,
-              TypeScript and Tailwind CSS.
+              a full-stack web developer building responsive websites, e-commerce interfaces and practical web applications.
             </p>
 
             <p className="text-gray-300 leading-8 mt-5">
-              Currently, I'm also learning Backend Development and Artificial
-              Intelligence to become a Full Stack Developer.
+              My work includes React, Next.js, TypeScript, Tailwind CSS, Node.js and Express. I have built backend API and order-management workflows, and continue developing my FastAPI, database and AI skills.
             </p>
             <p className="text-gray-300 leading-8 mt-5">
-             I enjoy turning ideas into real-world web applications with clean code,
-            responsive layouts and modern user experiences.
+             I focus on turning real business requirements into usable products, from shopping carts and checkout flows to dashboards and responsive layouts.
            </p>
           </motion.div>
 
