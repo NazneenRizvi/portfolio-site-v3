@@ -18,18 +18,18 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")),
 
   title: {
-    default: "Nazneen Rizvi | Front-End Developer",
+    default: "Nazneen Rizvi | Full-Stack Web Developer",
     template: "%s | Nazneen Rizvi",
   },
   
 
   description:
-    "Front-End Developer specializing in Next.js, React, TypeScript and Tailwind CSS. Explore my portfolio, projects and contact me for freelance or full-time opportunities.",
+    "Full-stack web developer building React and Next.js applications, Node.js and Express APIs, and e-commerce storefronts. Explore my projects and get in touch.",
 
   keywords: [
     "Nazneen Rizvi",
-    "Frontend Developer",
-    "Front-End Developer",
+    "Full-Stack Web Developer",
+    "E-commerce Developer",
     "Next.js",
     "React",
     "TypeScript",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   creator: "Nazneen Rizvi",
 
   openGraph: {
-    title: "Nazneen Rizvi | Front-End Developer",
+    title: "Nazneen Rizvi | Full-Stack Web Developer",
     description:
       "Explore my portfolio, projects and skills built with Next.js, React and TypeScript.",
     url: "/",
@@ -63,9 +63,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Nazneen Rizvi | Front-End Developer",
+    title: "Nazneen Rizvi | Full-Stack Web Developer",
     description:
-      "Portfolio built using Next.js, React, TypeScript and Tailwind CSS.",
+      "Full-stack projects using React, Next.js, TypeScript, Node.js, Express and Tailwind CSS.",
   },
 
   robots: {
